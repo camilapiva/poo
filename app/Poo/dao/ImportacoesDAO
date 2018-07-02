@@ -1,0 +1,184 @@
+<?php
+
+namespace App\Http\Controllers;
+namespace Poo;
+
+use Carbon\Carbon as Carbon;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesResources;
+
+use Request;
+
+use App\Http\Requests;
+use Illuminate\Support\Facades\Input;
+use Excel;
+use DB;
+use Carbon\Carbon;
+use Datatables;
+use Session;
+
+$_SESSION['sistema'] = 'Carro_Eletrico';
+$_SESSION['sub_sistema'] = '';
+class HomeController extends Controller
+
+class Controller extends BaseController
+{
+    use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
+}
+
+public function importar_arquivo()
+    {
+
+        require_once("Importacoes.php");
+
+        $Importacoes = new Importacoes();
+        $testes->setCod_teste($_POST['cod_teste']);
+
+        $dh_coleta = $_POST['dh_coleta'];
+        $cod_teste = $_POST['cod_teste'];
+        $cod_sensor = $_POST['cod_sensor'];
+        $temp_sensor = $_POST['temp_sensor'];
+        $id_sensor = $_POST['id_sensor'];
+
+    	$_SESSION['sub_sistema'] = 'Sub_Menu';
+
+    	$veiculos = DB::table('veiculos')
+    		->orderBy('desc_veiculo','asc')
+    		->get();
+    	
+    	return view('home/importar_arquivo')
+    		->with('veiculos', $veiculos);
+    }
+
+        public function import_arquivo()
+    {
+    	$_SESSION['sub_sistema'] = 'Sub_Menu';
+    	ini_set('max_execution_time', 10000); 
+
+    	$excel = Input::file('arquivo');
+    	$input = Request::all();
+
+    	DB::table('testes')
+    		->insert([
+    			'cod_veiculo' => $input['cod_veiculo'],
+    			'dh_importacao' => Carbon::now('America/Sao_paulo'),
+    			'dh_teste' => $input['dh_teste'],
+    			'observacao_test' => $input['observacao_teste']
+    		]);
+
+    	$id_teste = DB::getPDO()->LastInsertId();
+
+    	Excel::load($excel, function($reader) use($id_teste) {
+
+		    // Getting all results
+		    $cabecalho = $reader->first()->keys()->toArray();
+		   	
+		   	$array_cabecalho = array();
+			
+		   	$results = $reader->all();
+
+		   	foreach ($cabecalho as $key => $cab)
+		   	{
+		   		if($cab <> 'time')
+		   		{
+
+			   		$verif = DB::table('cabecalhos')
+			   			->where('local_sensor', $cab)
+			   			->first();
+
+			   		if(!$verif)
+			   		{
+			   			DB::table('cabecalhos')
+			   				->insert([
+			   					'local_sensor' => $cab
+			   				]);
+			   		}
+
+			   		$id_cabecalho = DB::table('cabecalhos')
+			   			->where('local_sensor', $cab)
+			   			->first();
+
+			   		foreach ($results as $key => $val)
+			   		{
+			   			
+			   			if($val->$cab == null)
+			   			{
+			   				$dados_coluna = '00.00';
+			   			}else{
+			   				$dados_coluna = $val->$cab;
+			   			}
+			   			// echo $val->$cab;
+			   			DB::table('temp_coletadas')
+			   				->insert([
+			   					'dh_coleta' => $val->time,
+			   					'cod_teste' => $id_teste,
+			   					'cod_sensor' => $id_cabecalho->cod_sensor,
+			   					'temp_sensor' => $dados_coluna
+			   				]);
+			   		}
+			   	}
+		   	}
+
+		   	echo "<script>alert('Dados inseridos com sucesso.') </script>";
+		   	echo "<script> window.history.back(); </script>";
+
+		});
+    }
+
+        public function arquivos_importados()
+    {
+
+        require_once("Importacoes.php");
+
+        $Importacoes = new Importacoes();
+        $testes->setCod_teste($_POST['cod_teste']);
+
+        $dh_coleta = $_POST['dh_coleta'];
+        $cod_teste = $_POST['cod_teste'];
+        $cod_sensor = $_POST['cod_sensor'];
+        $temp_sensor = $_POST['temp_sensor'];
+        $id_sensor = $_POST['id_sensor'];
+
+
+    	$_SESSION['sub_sistema'] = 'Sub_Menu';
+
+    	$dados = DB::table('testes as a')
+    		->join('veiculos as b','a.cod_veiculo','=','b.cod_veiculo')
+    		->select('a.cod_teste','a.observacao_test','a.dh_importacao','a.dh_teste','b.desc_veiculo')
+    		->get();
+
+    	return view('home/arquivos_importados')
+    		->with('dados', $dados);
+    }
+
+    public function visualizar_dados_teste($id)
+    {
+
+        require_once("Importacoes.php");
+
+        $Importacoes = new Importacoes();
+        $testes->setCod_teste($_POST['cod_teste']);
+
+        $dh_coleta = $_POST['dh_coleta'];
+        $cod_teste = $_POST['cod_teste'];
+        $cod_sensor = $_POST['cod_sensor'];
+        $temp_sensor = $_POST['temp_sensor'];
+        $id_sensor = $_POST['id_sensor'];
+        
+    	$_SESSION['sub_sistema'] = 'Sub_Menu';
+    	Session::put('id_teste', $id);
+    	
+    	$sensores = DB::table('temp_coletadas as a')
+    		->join('cabecalhos as b','a.cod_sensor','=','b.cod_sensor')
+    		->select('b.local_sensor')
+    		->where('a.cod_teste', $id)
+    		->groupBy('a.cod_sensor')
+    		->orderBy('b.local_sensor', 'asc')
+    		->get();
+
+    	return view('home/visualizar_dados_teste')
+    		->with('sensores', $sensores);
+    }

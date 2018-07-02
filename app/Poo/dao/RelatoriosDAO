@@ -1,0 +1,98 @@
+<?php
+
+namespace App\Http\Controllers;
+namespace Poo;
+
+use Carbon\Carbon as Carbon;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesResources;
+
+use Request;
+
+use App\Http\Requests;
+use Illuminate\Support\Facades\Input;
+use Excel;
+use DB;
+use Carbon\Carbon;
+use Datatables;
+use Session;
+
+$_SESSION['sistema'] = 'Carro_Eletrico';
+$_SESSION['sub_sistema'] = '';
+class HomeController extends Controller
+
+class Controller extends BaseController
+{
+    use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
+}
+
+public function relatorios()
+    {
+
+        $veiculos = DB::table('veiculos')
+            ->orderBy('desc_veiculo','asc')
+            ->get();
+
+        $cabecalhos = DB::table('cabecalhos')
+            ->orderBy('local_sensor','asc')
+            ->get();
+
+        return view('home/relatorios')
+            ->with('cabecalhos', $cabecalhos)
+            ->with('veiculos', $veiculos);
+    }
+
+    public function dados_relatorio()
+    {
+        $input = Request::all();
+
+        $data_1 = $input['data_1'].':00';
+        $data_2 = $input['data_2'].':59';
+
+        $cabecalho = DB::table('cabecalhos')
+            ->whereIn('cod_sensor', $input['cabecalho'])
+            ->orderBy('local_sensor','asc')
+            ->get();
+
+        $dados_seg = DB::table('testes as a')
+            ->join('temp_coletadas as b','a.cod_teste','=','b.cod_teste')
+            ->join('cabecalhos as c','b.cod_sensor','=','c.cod_sensor')
+            ->select('a.cod_veiculo','b.*','c.local_sensor')
+            ->where('a.cod_veiculo', $input['cod_veiculo'])
+            ->whereBetween('b.dh_coleta',[$data_1, $data_2])
+            ->whereIn('b.cod_sensor', $input['cabecalho'])
+            ->orderBy('dh_coleta','asc')
+            ->get();
+
+
+        $dh_coleta_min = DB::table('testes as a')
+            ->join('temp_coletadas as b','a.cod_teste','=','b.cod_teste')
+            ->select('b.dh_coleta')
+            ->where('a.cod_veiculo', $input['cod_veiculo'])
+            ->whereBetween('b.dh_coleta',[$data_1, $data_2])
+            ->whereIn('b.cod_sensor', $input['cabecalho'])
+            ->orderBy('dh_coleta','asc')
+            ->groupBy(db::raw('year(b.dh_coleta),month(b.dh_coleta),day(b.dh_coleta),hour(b.dh_coleta),minute(b.dh_coleta)'))
+            ->get();
+
+        $dados_min = DB::table('testes as a')
+            ->join('temp_coletadas as b','a.cod_teste','=','b.cod_teste')
+            ->select('a.cod_veiculo','b.cod_sensor','b.dh_coleta',db::raw('avg(b.temp_sensor) as Media'))
+            ->where('a.cod_veiculo', $input['cod_veiculo'])
+            ->whereBetween('b.dh_coleta',[$data_1, $data_2])
+            ->whereIn('b.cod_sensor', $input['cabecalho'])
+            ->orderBy('dh_coleta','asc')
+            ->groupBy(db::raw('b.cod_sensor, year(b.dh_coleta),month(b.dh_coleta),day(b.dh_coleta),hour(b.dh_coleta),minute(b.dh_coleta)'))
+            ->get();
+
+        
+
+        return view('home/dados_relatorio')
+            ->with('cabecalho', $cabecalho)
+            ->with('dh_coleta_min', $dh_coleta_min)
+            ->with('dados_min', $dados_min)
+            ->with('dados_seg', $dados_seg);
+    }

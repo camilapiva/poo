@@ -1,0 +1,1524 @@
+/* Fix IE. Hide from IE Mac \*/
+* html ul .root { float: left; }
+/* End */
+
+body {
+  color: #444;
+  background: #FFF;
+  margin: 0px;
+  padding: 0px;
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 12px;
+}
+table {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 0px;
+  border: none;
+  color: #15477D;
+}
+a {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 12px;
+  color: #15477D;
+  text-decoration: none;
+}
+a:hover {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 12px;
+  color: #15477D;
+  text-decoration: none;
+}
+a.menu {
+  font-family: "SegoeUILight", Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #FFF;
+  text-decoration: none;
+}
+a.menu:hover {
+  font-family: "SegoeUILight", Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #FFF;
+  text-decoration: underline;
+}
+a.menuMW {
+  font-family: "SegoeUILight", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #FFF;
+  text-decoration: none;
+}
+a.menuMW:hover {
+  font-family: "SegoeUILight", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #FFF;
+  text-decoration: underline;
+}
+p {
+  margin:0px;
+}
+fieldset {
+  background-color: #FFFFFF;
+  border: 1px solid #BCDAE4;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 2px;
+  margin-top: 3px;
+  margin-right: 3px;
+  margin-left: 2px;
+  margin-bottom: 2px;
+}
+fieldset legend {
+  color: #444;
+  background: #FFF;
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 12px;
+}
+
+.tableHidden {
+}
+.tableLista {
+  background-color: #BFBFBF;
+}
+.tableListaHeader {
+  background-color: #BFBFBF;
+  height: 21px;
+  line-height: 21px;
+  text-align: center;
+  padding: 2px;
+}
+.tableListaInnerHeader {
+  background-color: #BFBFBF;
+  height: 21px;
+  line-height: 21px;
+  text-align: center;
+  padding: 2px;
+}
+.tableListaHeaderDestaque {
+  background-color: #BFBFBF;
+  height: 21px;
+  line-height: 21px;
+  text-align: center;
+  padding: 2px;
+}
+.tableListaRow {
+  height: 21px;
+  background-color: #F2F2F2;
+  padding: 2px;
+}
+.tableListaRowDestaque {
+  height: 21px;
+  background-color: #E5E5E5;
+  padding: 2px;
+}
+.tableListaInnerRowDestaque {
+  height: 21px;
+  background-color: #BFBFBF;
+  padding: 2px;
+}
+.tableListaRowAtencao {
+  height: 21px;
+  background-color: #BFBFBF;
+  padding: 2px;
+}
+.tableListaRowApagado {
+  color: #333333;
+  height: 21px;
+  background-color: #F2F2F2;
+  padding: 2px;
+}
+
+table.tableSorter {
+  background-color: #BFBFBF;
+}
+table.tableSorter thead tr th {
+  background-color: #BFBFBF;
+  height: 40px;
+  line-height: 21px;
+  text-align: left;
+}
+table.tableSorter thead tr .header {
+  background-image: url(clean_sorter_bg.gif);
+  background-repeat: no-repeat;
+  background-position: center right;
+  cursor: pointer;
+  padding-left: 25px;
+  padding-right: 10px;
+}
+table.tableSorter tbody td {
+  height: 25px;
+  background-color: #F2F2F2;
+  padding-left: 25px;
+  vertical-align: middle;
+}
+table.tableSorter tbody tr.even td  a {
+  color: #15477D;
+}
+table.tableSorter tbody tr.even td  a:hover {
+  color: #15477D;
+}
+table.tableSorter tbody tr.odd td {
+  background-color:#E5E5E5;
+}
+table.tableSorter thead tr .headerSortUp {
+  background-image: url(clean_sorter_asc.gif);
+}
+table.tableSorter thead tr .headerSortDown {
+  background-image: url(clean_sorter_desc.gif);
+}
+table.tableSorter thead tr .headerSortDown,
+table.tableSorter thead tr .headerSortUp {
+  background-color: #BFBFBF;
+}
+
+.tableCadastro {
+  background-color: #F2F2F2;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.tableCadastroLabel {
+  height: 27px;
+  background-color: #F2F2F2;
+  text-align: left;
+  white-space: nowrap;
+  padding: 0px 0px 0px 0px;
+  vertical-align: top;
+}
+.tableCadastroField {
+  background-color: #F2F2F2;
+  color: #333333;
+  padding-bottom: 6px;
+}
+.tableCadastroCheck {
+  height: 15px;
+  background-color: #F2F2F2;
+  padding-bottom: 0px;
+}
+.tableCadastroControl {
+  height: 38px;
+  line-height: 35px;
+  background-color: #BFBFBF;
+  vertical-align: middle;
+  text-align: right;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.tableFiltro {
+  background-color: #BFBFBF;
+  padding-left: 25px;
+  padding-right: 25px;
+  width: 100%;
+}
+.tableFiltroLabel {
+  height: 27px;
+  background-color: #BFBFBF;
+  text-align: left;
+  white-space: nowrap;
+}
+.tableFiltroField {
+  height: 27px;
+  background-color: #BFBFBF;
+}
+.tableFiltroControl {
+  height: 40px;
+  background-color: #BFBFBF;
+  vertical-align: middle;
+  text-align: right;
+}
+.tableMessage {
+  font-size: 10px;
+  color: tomato;
+  white-space: nowrap;
+}
+.tableVisualizacao {
+  background-color: #F2F2F2;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+.tableVisualizacaoLabel {
+  width: 70px;
+  height: 25px;
+  white-space: nowrap;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 12px;
+}
+.tableVisualizacaoLabelDestaque {
+  width: 100px;
+  height: 21px;
+  line-height: 21px;
+  background-color: #E0ECF5;
+  white-space: nowrap;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: top;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 2px;
+  padding-right: 0px;
+}
+.tableVisualizacaoField {
+  vertical-align: middle;
+  padding-left: 7px;
+  padding-right: 7px;
+  font-size: 12px;
+  color: #333333;
+}
+.tableVisualizacaoControl {
+  height: 38px;
+  background-color: #BFBFBF;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 25px;
+}
+.tableVisualizacaoDestaque {
+  background-color: #E0ECF5;
+  vertical-align: top;
+  height: 21px;
+  line-height: 21px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 2px;
+  padding-right: 0px;
+}
+.tableVisualizacaoRealce {
+  background-color: #E2F4E8;
+  vertical-align: top;
+  height: 21px;
+  line-height: 21px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 2px;
+  padding-right: 0px;
+}
+.tableVisualizacaoRealceControl {
+  height: 35px;
+  line-height: 35px;
+  background-color: #E2F4E8;
+  vertical-align: middle;
+  text-align: right;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.tableVisualizacaoLabelRealce {
+  background-color: #E2F4E8;
+  width: 100px;
+  height: 21px;
+  line-height: 21px;
+  white-space: nowrap;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: top;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 2px;
+  padding-right: 0px;
+}
+.tableVisualizacaoApagado {
+  color: #999;
+  background-color: #FFFFFF;
+  vertical-align: top;
+  height: 21px;
+  line-height: 21px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 2px;
+  padding-right: 0px;
+}
+/* Plano de fundo padrão #004D94 */
+.divLogin {
+  width: 100%; 
+  margin: 0px; 
+  padding: 0px; 
+  position: fixed; 
+  left: 0px; 
+  top: 0px; 
+  bottom: 0px; 
+  overflow: hidden; 
+  background-color: #9d2332;
+}
+.tableLogin {
+  background-color: #9d2332;
+}
+/* Cor do login */
+.tableLoginLabel {
+  background-color: #b52b3b;
+  text-align: center;
+  font-size: 13px;
+  color: #FFFFFF;
+  width: 80px;
+  height: 30px;
+}
+.tableLoginField {
+  background-color: #FFFFFF;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+}
+.inputTextLogin {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  color: #666666;
+  border: none;
+  background-color: #FFFFFF;
+  width: 200px;
+  padding-left: 5px;
+}
+.commandLogin {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  color: #FFFFFF;
+  background-color: #0054A1;
+  border-top:  #0054A1 1px solid;
+  border-bottom: #0054A1 1px solid;
+  border-left: #0054A1 1px solid;
+  border-right: #0054A1 1px solid;
+  width: 90px;
+  height: 70px;
+}
+.textLogin {
+  color: #FFFFFF;
+  text-align: center; 
+  margin: 0px 0px 0px 0px; 
+  padding: 0px 0px 0px 0px; 
+  position: fixed; 
+  left: 0px; 
+  right: 0px; 
+  top: 0px; 
+  bottom: 0px;
+  white-space: nowrap;
+}
+.linkLogin {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 10px;
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.linkLogin:hover {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 10px;
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.linkSelected div {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-color: #2060A6;
+  padding: 10px 10px 10px 10px;
+}
+.linkNoSelected div {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 12px;
+  color: #2060A6;
+  padding: 10px 10px 10px 10px;
+}
+.linkNoSelected:hover div {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-color: #2060A6;
+  padding: 10px 10px 10px 10px;
+}
+
+.linkTituloNoticia {
+  font-size: 15px;
+  color: #15477D;
+  font-weight: bold;
+}
+.linkTituloNoticiaDesabilitada {
+  font-size: 15px;
+  color: #BFBFBF;
+  font-weight: bold;
+}
+.subTituloNoticia {
+  font-size: 12px;
+  color: #15477D;
+}
+.subTituloNoticiaDesabilitada {
+  font-size: 12px;
+  color: #BFBFBF;
+}
+
+.commandButton {
+  background-color: #2260A6;
+  border-width: 0px;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  height: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 28px;
+  padding-right: 28px;
+  vertical-align: top;
+}
+.commandButton:hover {
+  background-color: #2260A6;
+}
+.commandButton[disabled] {
+  background-color: #E5E5E5;
+  color: #F2F2F2;
+  border-top: #E5E5E5 1px solid;
+  border-bottom: #E5E5E5 1px solid;
+  border-left: #E5E5E5 1px solid;
+  border-right: #E5E5E5 1px solid;
+}
+.commandButton[disabled]:hover {
+  background-color: #E5E5E5;
+}
+.inputText {
+  font-family: "SegoeUILight", "Courier New", monospace;
+  font-size: 12px;
+  color: #333333;
+  background-color: #FFFFFF;
+  border: 1px #BFBFBF solid;
+  height: 16px;
+  padding-left: 7px;
+  padding-right: 7px;
+  overflow: auto;
+}
+
+table.checkBoxBlackLabel {
+  color: #333333;
+  background-color: #F2F2F2;
+  vertical-align: middle;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+input.checkBoxBlackLabel {
+  border: 0px;
+  vertical-align: middle;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+table.checkBoxStyle {
+  color: #15477D;
+  background-color: #F2F2F2;
+  vertical-align: middle;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+input.checkBoxStyle {
+  border: 0px;
+  vertical-align: middle;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.inputDropDown {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  height: 20px;
+  border: 1px #BFBFBF solid;
+  padding-top: 2px;
+}
+.inputDefault {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 10px;
+  color: #333333;
+  background-color: #FFFFFF;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.divDashCadastro {
+  margin-bottom:20px; 
+  margin-top:20px; 
+  height: 2px; 
+  width: 100%; 
+  background-color: #E5E5E5; 
+  border: 0px;
+}
+.divDashListagem {
+  margin-bottom:0px; 
+  margin-top:0px; 
+  height: 1px; 
+  width: 100%; 
+  background-color: #F2F2F2; 
+  border: 0px;
+}
+
+.tableFieldSet {
+  background-color: #F2F2F2;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.tableFieldSetLegend {
+  background-color: #F2F2F2;
+  color: #15477D;
+  font-size: 12px;
+  text-align: left;
+  font-weight: bold;
+  height: 15px;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding-top: 10px;
+  padding-bottom: 9px;
+}
+.tableFieldSetBody {
+  background-color: #F2F2F2;
+  color: #15477D;
+  font-size: 12px;
+  text-align: left;
+  height: 20px;
+  padding-left: 0px;
+}
+.tableFieldSetLabel {
+  width: 70px;
+  height: 25px;
+  white-space: nowrap;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 12px;  
+}
+.tableFieldSetField {
+  vertical-align: middle;
+  padding-left: 7px;
+  padding-right: 7px;
+  font-size: 12px;
+  color: #333333;
+}
+.tableFieldSetField input {
+  height: 18px;
+}
+
+.firstHeaderMW {
+  width: 100%;
+  height: 36px;
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 14px;
+  color: #FFFFFF;
+  background-color: #2260A6;
+}
+.firstHeader {
+  width: 100%;
+  height: 16px;
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 11px;
+  color: #FFF;
+  background-color: #000;
+}
+.titulo {
+  background-color: #BFBFBF;
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  vertical-align: middle;
+  text-align: center;
+  color: #2C477C;
+  height: 40px;
+  width: 100%;
+}
+.subtitulo {
+  background-color: #DDE9F2;
+  color: #444;
+  height: 21px;
+  border: 0px;
+}
+.texto {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 12px;
+}
+.textofixo {
+  font-family: "SegoeUILight", "Courier New", monospace;
+  font-size: 12px;
+}
+.textopequeno {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 10px;
+}
+.textoapagado {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 12px;
+  color: #BFBFBF;
+}
+.textopequenoapagado {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 10px;
+  color: #BFBFBF;
+}
+
+.mandatoryField {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 12px;
+  color: #666666;
+  padding-left: 6px;
+}
+
+.messageZone {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 14px;
+  text-align: left;
+  color: #333333;
+  width: 100%;
+  background-color: #F2F2F2;
+  border: 0px;
+  border-left: 1px solid #BFBFBF;
+  border-right: 1px solid #BFBFBF;
+  border-bottom: 1px solid #BFBFBF;
+  display:none;
+  cursor:default;
+}
+.messageZoneTitle {
+  background-color: #BFBFBF;
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 18px;  
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  color: #15477D;
+  border: solid 1px #BFBFBF;
+  height: 28px;
+  width: 100%;
+}
+.waitingMessage {
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+  display:none;
+  cursor:default;
+}
+#navigationTab {
+  float:left;
+  /*width:100%;*/
+  background:inherit;
+  line-height:normal;
+  /*padding-left: 21px;*/
+}
+#navigationTab ul {
+  margin:0;
+  padding: 0px;
+  list-style:none;
+}
+#navigationTab li {
+  display:inline;
+  margin:0;
+  padding:0;
+}
+#navigationTab a {
+  float:left;
+  /*background:url("tableft.gif") no-repeat left top;*/
+  margin-left: 0px;
+  margin-right: 8px;
+  padding: 0px;
+  text-decoration:none;
+}
+#navigationTab a span {
+  float:left;
+  display:block;
+  /*background:url("tabright.gif") no-repeat right top;*/
+  padding: 4px 10px 4px 10px;
+  font-family: "SegoeUILight", "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 12px;
+  color: #15477D;
+  background-color: #E5E5E5;
+}
+#navigationTab a:hover {
+  /*background-position:0% -42px;*/
+}
+#navigationTab a:hover span {
+  /*background-position:100% -42px;*/
+  color:#F2F2F2;
+  background-color: #2260A6;
+}
+#navigationTab #current a {
+  /*background-position:0% -42px;*/
+}
+#navigationTab #current a span {
+  /*background-position:100% -42px;*/
+  color: #F2F2F2;
+  font-weight: normal;
+  background-color: #2260A6;
+}
+
+#navigationSubTab {
+  float:left;
+  /*width:100%;*/
+  background:inherit;
+  line-height:normal;
+  /*padding-left: 21px;*/
+}
+#navigationSubTab ul {
+  margin:0;
+  padding: 0px;
+  list-style:none;
+}
+#navigationSubTab li {
+  display:inline;
+  margin:0;
+  padding:0;
+}
+#navigationSubTab a {
+  float:left;
+  /*background:url("tableft.gif") no-repeat left top;*/
+  margin-left: 0px;
+  margin-right: 8px;
+  padding: 0px;
+  text-decoration:none;
+}
+#navigationSubTab a span {
+  float:left;
+  display:block;
+  /*background:url("tabright.gif") no-repeat right top;*/
+  padding: 4px 10px 4px 10px;
+  font-family: "SegoeUILight", "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 12px;
+  color: #15477D;
+  background-color: #E5E5E5;
+}
+#navigationSubTab a:hover {
+  /*background-position:0% -42px;*/
+}
+#navigationSubTab a:hover span {
+  /*background-position:100% -42px;*/
+  color:#F2F2F2;
+  background-color: #2260A6;
+}
+#navigationSubTab #current a {
+  /*background-position:0% -42px;*/
+}
+#navigationSubTab #current a span {
+  /*background-position:100% -42px;*/
+  color: #F2F2F2;
+  font-weight: normal;
+  background-color: #2260A6;
+}
+
+#menuTab {
+  float:left;
+  width:100%;
+  line-height:normal;
+  margin:0;
+  padding:0;
+}
+#menuTab ul {
+  margin:0;
+  padding:0px 0 0 0px;
+  list-style:none;
+}
+#menuTab li {
+  display:inline;
+  margin:0;
+  padding:0;
+}
+#menuTab a {
+  float:left;
+  text-align: center;
+  background-color: #1A518E;
+  margin:0;
+  padding:0 0 0 0px;
+  text-decoration:none;
+}
+#menuTab a span {
+  float:none;
+  display:block;
+  background-color: #1A518E;
+  font-family: "SegoeUILight", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #F2F2F2;
+  padding-top: 3px;
+  padding-bottom: 5px;  
+}
+#menuTab a:hover span {
+  text-decoration: none;
+}
+#menuTab #current a {
+  background-color: #2260A6;
+}
+#menuTab #current a span {
+  background-color: #2260A6;
+  color: #F2F2F2;
+}
+
+.tableCalendar {
+  background-color: #BCDAE4;
+  border: 1px #BCDAE4 solid;
+  border-spacing: 1px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.tableCalendarWeekHeader {
+  text-decoration: none;
+  background-color: #DDE9F2;
+  color: #444;
+  height: 21px;
+  line-height: 21px;
+  padding: 0px;
+  border: 0px;
+  text-align: center;
+}
+.tableCalendarWeek {
+  background-color: #FFF;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  padding-top: 1px;
+  padding-left: 1px;
+  padding-right: 2px;
+  vertical-align: top;
+  text-align: right;
+}
+.tableCalendarWeekAtencao {
+  background-color: #FAEBEB;
+}
+.tableCalendarWeekend {
+  background-color: #DEE6ED;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  padding-top: 1px;
+  padding-left: 1px;
+  padding-right: 2px;
+  vertical-align: top;
+  text-align: right;
+}
+.tableCalendarWeekendAtencao {
+  background-color: #F4DAD9;
+}
+.tableCalendarDay {
+  background: #CBD8E2;
+  font-weight: bold;
+  padding-right: 5px;
+  text-align: right;
+  margin: 0;
+}
+.tableCalendarTime {
+  background: #CBD8E2;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+.tableCalendarItem {
+  padding:5px;
+  text-align: left;
+}
+.tableCalendarItem div a {
+  color: #5A7C85;
+}
+.tableCalendarItem div a:hover {
+  color: #5A7C85;
+}
+#gridcontainer {
+  background: #BCDAE4;
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+  -webkit-user-select: none;
+  -khtml-user-select: none
+}
+.wk-weektop {
+  table-layout: fixed;
+  font-size: 9pt;
+  overflow: hidden;
+  width: 100%;
+  line-height: 14px;
+  background: #DDE9F2;
+  color: #444;
+}
+.wk-tzlabel {
+  padding-bottom: 2px;
+  vertical-align: bottom;
+  overflow:hidden;
+  color: #468;
+  text-align: center;
+}
+.wk-dayname {
+  padding-right: 4px;
+  padding-left: 4px;
+  font-weight: normal;
+  padding-bottom:2px;
+  margin-left: 4px;
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  color: #444;
+  padding-top: 2px;
+  white-space: nowrap;
+}
+.wk-dummyth {
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  vertical-align: top;
+  padding-top: 0px;
+  background: #E0ECF5;
+}
+.wk-scrolltimedevents {
+  padding-right: 0px;
+  overflow-y: scroll;
+  padding-left: 0px;
+  overflow-x: hidden;
+  padding-bottom: 0px;
+  border-left: #BCDAE4 1px solid;
+  padding-top: 0px;
+  position: relative;
+  background-color: #FFF;
+}
+.tg-timedevents {
+  table-layout: fixed;
+  margin-top: -1px;
+  width: 100%;
+  line-height: normal
+}
+.tg-hourmarkerwrapper {
+  position: relative;
+}
+.tg-hourmarkers {
+  width: 100%;
+  position: absolute;
+  left:0;
+  top:0;
+}
+.tg-dualmarker {
+  border-top: #ddd 1px solid;
+  margin-bottom: 1em;
+  line-height: 1em;
+  border-bottom: #ddd 1px dotted;
+  height: 1em
+}
+.tg-times {
+  padding-right: 1px;
+  padding-left: 0px;
+  font-size: 9pt;
+  padding-bottom: 0px;
+  vertical-align: top;
+  overflow: hidden;
+  color: #468;
+  padding-top: 1px;
+  background-color: #F3F7FD;
+  text-align: right
+}
+.tg-time {
+  padding-right: 2px;
+  border-bottom: #ddd 1px solid;
+}
+.tg-nowptr {
+  background-image: url(/imagens/agenda_seta.gif);
+  width: 5px;
+  position: absolute;
+  height: 9px;
+  background-repeat:no-repeat;
+}
+.tg-day {
+  vertical-align: top;
+  overflow: hidden;
+  border-left: #ddd 3px double
+}
+.tg-daywrapper {
+  cursor: default;
+  margin-right: 2px;
+  position: relative
+}
+.tg-daywrapper a:hover {
+  color: #5A7C85;
+  text-decoration: none
+}
+.tg-today {
+  background-color: #ffc
+}
+.chip {
+  font-size: 85%;
+  overflow: hidden;
+  cursor: default;
+  color:#000;
+  font-weight:bold;
+  position: absolute;
+  left:0;
+  -moz-user-select: none
+}
+.chip DD {
+  padding-right: 1px;
+  padding-left: 1px;
+  padding-bottom: 0px;
+  margin: 0px;
+  font: 100%/1.3em "SegoeUILight", "Trebuchet MS",sans-serif;
+  overflow: hidden;
+  padding-top: 0px;
+  text-align: left;
+  color: #5A7C85;
+  text-decoration: none
+}
+.chip DL {
+  border-top: 1px solid;
+  padding-right: 0px;
+  border-top: 0px solid;
+  padding-left: 0px;
+  padding-bottom: 1px;
+  margin: 0px;
+  overflow: hidden;
+  border-left: 1px solid;
+  padding-top: 0px;
+  border-bottom: 0px solid
+}
+.chip DT {
+  margin-top: -1px;
+  padding-left: 1px;
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  font-size: 85%;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left
+}
+.cbrd {
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+.cbrd DL {
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px
+}
+.cbrd DT {
+  margin-top: 0px
+}
+.cic {
+  display: inline-block;
+  margin-left: 2px;
+  width: 9px;
+  line-height: 7px;
+  height: 7px
+}
+/** css agenda - fim **/
+
+/** css tooltip - inicio **/
+#tooltip {
+  position: absolute;
+  z-index: 20;
+  border: 1px solid #111;
+  background-color: #FFF;
+  padding: 5px;
+}
+#tooltip h3,
+#tooltip div {
+  margin: 0;
+  font-weight:normal;
+}
+#tooltip.fancy {
+  font-size: 12px;
+  color: #444;
+  font-family: "SegoeUILight", "Trebuchet MS", sans-serif;
+  border: none;
+  width: 285px;
+  height: 199px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: url('/imagens/fancy.png') no-repeat;
+}
+#tooltip.fancy h3 {
+  margin-bottom: 0.75em;
+  font-size: 12px;
+  width: 255px;
+  text-align: left;
+}
+#tooltip.fancy div {
+  width: 255px;
+  text-align: left;
+}
+/** css tooltip - fim **/
+
+/** css tree - inicio */
+.tree {
+  margin:0;
+  padding:0;
+
+}
+.tree li {
+  list-style: none;
+  margin:0;
+  padding:0 0 0 34px;
+  line-height: 14px;
+}
+.tree li span {
+  display:inline;
+  clear: left;
+}
+.tree li span a {
+}
+.tree li span a:hover {
+}
+.tree ul {
+  margin:0;
+  padding:0;
+}
+.tree .root {
+  margin-left: -15px;
+}
+.tree .line {
+  margin:0 0 0 -16px;
+  padding:0;
+  line-height: 3px;
+  height:3px;
+  font-size:3px;
+  background: url(/lib/jquery.tree/line_bg.gif) 0 0 no-repeat transparent;
+}
+.tree .line-last {
+  margin:0 0 0 -16px;
+  padding:0;
+  line-height: 3px;
+  height:3px;
+  font-size:3px;
+  background: url(/lib/jquery.tree/spacer.gif) 0 0 no-repeat transparent;
+}
+.tree .line-over {
+  margin:0 0 0 -16px;
+  padding:0;
+  line-height: 3px;
+  height:3px;
+  font-size:3px;
+  background: url(/lib/jquery.tree/line_bg_over.gif) 0 0 no-repeat transparent;
+}
+.tree .line-over-last {
+  margin:0 0 0 -16px;
+  padding:0;
+  line-height: 3px;
+  height:3px;
+  font-size:3px;
+  background: url(/lib/jquery.tree/line_bg_over_last.gif) 0 0 no-repeat transparent;
+}
+.tree .folder-open {
+  margin-left:-16px;
+  background: url(/lib/jquery.tree/blue_collapsable.gif) 0 -2px no-repeat transparent;
+}
+.tree .folder-open-last {
+  margin-left:-16px;
+  background: url(/lib/jquery.tree/blue_collapsable-last.gif) 0 -2px no-repeat transparent;
+}
+.tree .folder-close {
+  margin-left:-16px;
+  background: url(/lib/jquery.tree/blue_expandable.gif) 0 -2px no-repeat transparent;
+}
+.tree .folder-close-last {
+  margin-left:-16px;
+  background: url(/lib/jquery.tree/blue_expandable-last.gif) 0 -2px no-repeat transparent;
+}
+.tree .doc {
+  margin-left:-16px;
+  background: url(/lib/jquery.tree/leaf.gif) 0 -1px no-repeat transparent;
+}
+.tree .doc-last {
+  margin-left:-16px;
+  background: url(/lib/jquery.tree/leaf-last.gif) 0 -1px no-repeat transparent;
+}
+.tree .ajax {
+  background: url(/lib/jquery.tree/spinner.gif) no-repeat 0 0 transparent;
+  height: 16px;
+  display:none;
+}
+.tree .ajax li {
+  display:none;
+  margin:0;
+  padding:0;
+}
+.tree .trigger {
+  display:inline;
+  margin-left:-32px;
+  width: 28px;
+  height: 11px;
+  cursor:pointer;
+}
+.tree .text {
+  cursor: default;
+}
+.tree .active {}
+/** css tree - fim */
+
+.SMS {
+  width: 100%;
+  color: #666666;
+}
+@font-face {
+  font-family: 'SegoeUILight';
+  src: url('fonts/segoeui.eot');
+  src: url('fonts/segoeuil.eot');
+  src: url('fonts/segoeuib.eot');
+  src: url('fonts/segoeuii.eot');
+  src: url('fonts/segoeuiz.eot');
+  src: url('fonts/seguisb.eot');    
+  src: url('fonts/segoeui.eot?#iefix') format('embedded-opentype'),
+    url('fonts/segoeuil.eot?#iefix') format('embedded-opentype'),
+    url('fonts/segoeuib.eot?#iefix') format('embedded-opentype'),
+    url('fonts/segoeuii.eot?#iefix') format('embedded-opentype'),         
+    url('fonts/segoeuiz.eot?#iefix') format('embedded-opentype'),
+    url('fonts/seguisb.eot?#iefix') format('embedded-opentype'),
+    url('fonts/segoeui.ttf') format('truetype'),
+    url('fonts/segoeuil.ttf') format('truetype'),
+    url('fonts/segoeuib.ttf') format('truetype'),
+    url('fonts/segoeuii.ttf') format('truetype'),
+    url('fonts/segoeuiz.ttf') format('truetype'),
+    url('fonts/seguisb.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.headerBackground {
+  height: 108px; 
+  width: 900px; 
+  background-color: #FFF; 
+  border: 1px solid #BFBFBF;      
+}
+
+.headerImage {
+  height: 100px; 
+  width: 400px; 
+  background-color: #FFF; 
+  border: 1px solid #BFBFBF;      
+}
+
+.divColorBackground {
+  height: 15px; 
+  width: 15px; 
+  background-color: #FFF; 
+  border: 1px solid #BFBFBF;
+}
+
+form div{
+  position:relative;
+}
+
+.select_div {
+  float:left;
+  border: 1px solid #BFBFBF;
+  width: 250px;
+  height: 20px;
+  background: url('/mw/imagens/seta_select.png') no-repeat right #FFFFFF;
+}
+
+select.select{
+  font-family: "SegoeUILight","Trebuchet MS",sans-serif;
+  font-size: 12px;
+
+  filter: alpha(opacity=0); /* Esconde checkbox original */
+  -webkit-opacity:0;
+  -khtml-opacity: 0;
+  -moz-opacity:0;
+  opacity: 0;
+
+  position:relative;
+  bottom:0;
+  left:0;
+
+  z-index:2;
+  width: 100%;
+  height:100%;
+  line-height: 100%;
+}
+
+span.select{
+  font-family: "SegoeUILight","Trebuchet MS",sans-serif;
+  font-size: 12px;
+  color: #333333;
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  z-index:1;	
+  width: 88%;
+  height: 15px;
+  overflow: hidden;
+}
+
+table.panel {
+  border-right: #E5E5E5 solid 1px;
+  font-family: "SegoeUILight","Trebuchet MS",sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+
+table.panel td.panelTitleResponsavel {
+  background-color: #BFBFBF;
+  border-left: #E5E5E5 solid 1px;
+  border-bottom: #E5E5E5 solid 1px;
+  color: #15477D;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+table.panel td.panelTitleEmpresa {
+  background-color: #BFBFBF;
+  border-left: #E5E5E5 solid 1px;
+  border-bottom: #E5E5E5 solid 1px;
+  color: #15477D;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+table.panel td.panelTitleAtividade {
+  border-left: #E5E5E5 solid 1px;
+  background-color: #BFBFBF;
+  color: #15477D;
+  font-weight: bold;
+  text-align: center;
+  height: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+table.panel td.listaAtividades {
+  border-top: #E5E5E5 solid 1px;
+  border-left: #E5E5E5 solid 1px;
+  border-bottom: #E5E5E5 solid 1px;
+  background-color: #BFBFBF;
+  color: #15477D;
+  font-weight: bold;
+  text-align: center;
+  width: 100px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+table.panel div.listaEmpresas {
+  background-color: white;
+  font-size: 13px;
+  font-weight: normal;
+  text-align: left;
+  padding-top: 8px;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-bottom: 8px;
+  white-space: nowrap;
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table.panel td.movimentos {
+  background-color: white;
+  border-left: #E5E5E5 solid 1px;
+  border-bottom: #E5E5E5 solid 1px;
+}
+
+table.panel td.movimentos div {
+  font-size: 13px;
+  padding-top: 8px;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-bottom: 8px;
+}
+
+table.panelLegend {
+  font-size: 10px;
+  color: #333333;
+}
+
+table.panelLegend td span {
+  padding-left: 5px;
+  padding-right: 20px;
+  height: 25px;
+  cursor: pointer;
+}
+
+table.panelLegend td div {
+  width: 10px;
+  height: 10px;
+}
+
+span.legendaMarcada {
+  color: #333333;
+}
+
+span.legendaDesmarcada {
+  color: #BFBFBF;
+}
+
+div.sitDesmarcada {
+  color: white;
+  background-color: white;
+  text-align: center;
+}
+
+div.sitNaoIniciada {
+  background-color: #BFBFBF;
+  text-align: center;
+}
+
+div.sitEmAndamento {
+  background-color: #F8F601;
+  text-align: center;
+}
+
+div.sitAtrasada {
+  background-color: #FC0319;
+  text-align: center;
+}
+
+div.sitConcluida {
+  background-color: #00FF01;
+  text-align: center;
+}
+
+div.sitConcluidaForaPrazo {
+  background-color: #8D4CFF;
+  text-align: center;
+}
+.divTooltip {
+  z-index:1000;
+  position:absolute;
+  padding:5px;
+  border: 1px solid #BFBFBF;
+  background-color:#E5E5E5;
+  text-align:left;
+  font-size:11px;
+  width:300px;
+}
+.textoCentralSolucoes {
+  font-size: 12px;
+  color: #333333;
+}
+.tituloCentralSolucoes {
+  font-size: 12px;
+  color: #15477d;
+  font-weight: bold;
+}
+.linkTituloCentralSolucoes {
+  font-size: large;
+  color: #15477d;
+  text-decoration: none;
+}
+.linkCentralSolucoes {
+  font-size: 12px;
+  color: #15477d;
+  font-weight: bold;
+  text-decoration: none;
+}
+linkListaCentralSolucoes {
+  font-size: 12px;
+  color: #15477d;
+  text-decoration: none;
+}
+.imagemOpaca {
+  filter:alpha(opacity=20);
+  -moz-opacity:0.2;
+  -khtml-opacity: 0.2;
+  opacity: 0.2;
+}
+

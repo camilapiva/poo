@@ -1,0 +1,91 @@
+<?php
+
+namespace App\Http\Controllers;
+namespace Poo;
+
+use Carbon\Carbon as Carbon;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesResources;
+
+use Request;
+
+use App\Http\Requests;
+use Illuminate\Support\Facades\Input;
+use Excel;
+use DB;
+use Carbon\Carbon;
+use Datatables;
+use Session;
+
+$_SESSION['sistema'] = 'Carro_Eletrico';
+$_SESSION['sub_sistema'] = '';
+class HomeController extends Controller
+
+class Controller extends BaseController
+{
+    use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
+}
+
+    public function getPosts()
+    {
+    	$id_teste = Session::get('id_teste');
+
+    	$dados = DB::table('temp_coletadas as a')
+    		->join('cabecalhos as b','a.cod_sensor','=','b.cod_sensor')
+    		->select('a.id as Id','a.dh_coleta as Coleta','b.local_sensor as Sensor','a.temp_sensor as Temp_sensor')
+    		->where('a.cod_teste', $id_teste);
+
+    	 return Datatables::of($dados)
+    	 	->make(true);
+    }
+
+        public function deletar_item_arquivo($id)
+    {
+
+            require_once("Testes.php");
+
+            $testes = new Testes();
+            $testes->setId_teste($_POST['id_teste']);
+
+            $id_teste = $_POST['id_teste'];
+            $cod_veiculo = $_POST['desc_teste'];
+            $dh_importacao = $_POST['dh_importacao'];
+            $dh_teste = $_POST['dh_teste'];
+            $observacao_test = $_POST['observacao_test'];
+
+    	DB::table('temp_coletadas')
+    		->where('id', $id)
+    		->delete();
+
+    	return back()
+    		->with('success', 'Dados excluidos com sucesso.');
+    }
+
+    public function deletar_dados_teste($id)
+    {
+
+            require_once("Testes.php");
+
+            $testes = new Testes();
+            $testes->setId_teste($_POST['id_teste']);
+
+            $id_teste = $_POST['id_teste'];
+            $cod_veiculo = $_POST['desc_teste'];
+            $dh_importacao = $_POST['dh_importacao'];
+            $dh_teste = $_POST['dh_teste'];
+            $observacao_test = $_POST['observacao_test'];
+
+    	DB::table('temp_coletadas')
+    		->where('cod_teste', $id)
+    		->delete();
+
+    	DB::table('testes')
+    		->where('cod_teste', $id)
+    		->delete();
+
+    	return back()->with('success', 'Dados excluidos com sucesso.');
+
+    }
