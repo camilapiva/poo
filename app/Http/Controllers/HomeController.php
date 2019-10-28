@@ -34,7 +34,7 @@ class HomeController extends Controller
     		->with('veiculos', $veiculos);
     }
 
-    public function import_arquivo()
+   public function import_arquivo()
     {
     	$_SESSION['sub_sistema'] = 'Sub_Menu';
     	ini_set('max_execution_time', 10000); 
